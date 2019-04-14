@@ -13,7 +13,7 @@ class Stack:
 		return self.stack.append(item) #Insert a item in the end.
 
 	def pop(self):
-		if is_empty():
+		if self.is_empty():
 			return 'Sorry!The stack is empty.'
 		else:
 			return self.stack.pop() #Removes the last item.
@@ -24,9 +24,9 @@ class Stack:
 	def peek(self):
 		return self.stack[len(self.stack)-1] #See the last item.
 
-
-my_stack = Stack()
-print("The stack is empty:", my_stack.is_empty())
-print('Adding Shafayet Sadi')
-my_stack.push("Shafayet Sadi")
-print("The stack is empty:", my_stack.is_empty())
+if __name__ == '__main__':
+	my_stack = Stack()
+	print("The stack is empty:", my_stack.is_empty())
+	print('Adding Shafayet Sadi')
+	my_stack.push("Shafayet Sadi")
+	print("The stack is empty:", my_stack.is_empty())

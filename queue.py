@@ -13,7 +13,7 @@ class Queue:
 		return self.items.append(item) #Insert a item in the end.
 
 	def dequeue(self):
-		if is_empty():
+		if self.is_empty():
 			print("Sorry!The queue is empty")
 		else:
 			return self.items.pop(0) #Removes the first item.
