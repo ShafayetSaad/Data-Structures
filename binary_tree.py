@@ -46,7 +46,37 @@ def create_tree():
 
     return two
 
+
+def pre_order(node):
+    print(node)
+    if node.left:
+        pre_order(node.left)
+    if node.right:
+        pre_order(node.right)
+
+
+def post_order(node):
+    if node.left:
+        post_order(node.left)
+    if node.right:
+        post_order(node.right)
+    print(node)
+
+
+def in_order(node):
+    if node.left:
+        in_order(node.left)
+    print(node)
+    if node.right:
+        in_order(node.right)
+
+
 if __name__ == '__main__':
 
     root = create_tree()
-    print(root)
+    print("Pre Order")
+    pre_order(root)
+    print("Post Order")
+    post_order(root)
+    print("In Order")
+    in_order(root)
